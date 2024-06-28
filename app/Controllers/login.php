@@ -67,11 +67,24 @@ class Login extends ResourceController
             throw new \Exception("Credentials is invalid!");
         }
 
-        $this->session->set('id', $user['id']);
-        $this->session->set('name', $user['name']);
-        $this->session->set('loggedIn', true);
-
-        return redirect()->to('/game');
+        if ($user['role'] == 'admin') {
+            // Jika pengguna adalah admin, arahkan ke halaman resep
+            $this->session->set('id', $user['id']);
+            $this->session->set('name', $user['name']);
+            $this->session->set('role', $user['role']); // Menyimpan peran pengguna
+            $this->session->set('loggedIn', true);
+            return redirect()->to('/admin');
+        } elseif ($user['role'] == 'user') {
+            // Jika pengguna adalah user, arahkan ke halaman role
+            $this->session->set('id', $user['id']);
+            $this->session->set('name', $user['name']);
+            $this->session->set('role', $user['role']); // Menyimpan peran pengguna
+            $this->session->set('loggedIn', true);
+            return redirect()->to('/game');
+        } else {
+            // Jika peran tidak sesuai dengan yang diharapkan
+            return redirect()->to(previous_url());
+        }
     }
 
     /**

@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-class shop extends BaseController
+class COCShop extends BaseController
 {
     public function index(): string
     {
-        return view('shop');
+        return view('shopcoc');
     }
 }

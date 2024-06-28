@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-class Game extends BaseController
+class PulsaShop extends BaseController
 {
     public function index(): string
     {
-        return view('game/userview');
+        return view('shoppulsa');
     }
 }

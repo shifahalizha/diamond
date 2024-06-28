@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-class Game extends BaseController
+class ValoShop extends BaseController
 {
     public function index(): string
     {
-        return view('game/userview');
+        return view('shopvalo');
     }
 }

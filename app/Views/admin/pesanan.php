@@ -91,7 +91,7 @@ https://templatemo.com/tm-589-lugx-gaming
     <div class="container">
       <div class="row">
         <div class="col-lg-3 col-md-6">
-          <a href="/ValoShop">
+          <a href="/pesananvalo">
             <div class="item">
               <div class="image">
                 <img src="/assets/images/logovalo.png" alt="" style="max-width: 44px;">

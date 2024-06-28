@@ -2,10 +2,10 @@
 
 namespace App\Controllers;
 
-class Game extends BaseController
+class Admin extends BaseController
 {
     public function index(): string
     {
-        return view('game/userview');
+        return view('admin/pesanan');
     }
 }
